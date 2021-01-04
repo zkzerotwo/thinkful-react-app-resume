@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Here you can find Sally contact information">
+  <title>Sally contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="resume-root"></div>
+
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  <script type="text/babel">
+    // Our code will go here
+    function App(props) {
+      console.log(props)
+      return <div>
+        {props.children};
+        </div>
+    }
+
+    ReactDOM.render(
+      <App>
+        <header>
+          <div id="img">
+            <img src="images/ilana-bby.jpg" alt="Malaga Panoramic" />
+          </div>
+          <h1 className="title">About me</h1>
+        </header>
+
+        <main>
+          <section id="introduction">
+            <p>Hi I'm Sally Superstar. I'm 25 and below this line you'll find more information about me.</p>
+          </section>
+          <br />
+          <section id="education">
+            <p>I have studied at:</p>
+            <ul>
+              <li>Thinkful</li>
+              <li>Minnesota University</li>
+            </ul>
+          </section>
+          <br />
+          <section id="works">
+            <p>I have worked at:</p>
+            <div id="works-list">
+              <ul>
+                <li>Github as Engineer during 2018 and there I have to
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </li>
+                <li>Jetbrains as Project manager during 2019 and I'm still working there. My work consist in
+                A assumenda autem dolorem doloremque
+                </li>
+              </ul>
+            </div>
+          </section>
+          <br />
+          <section id="contact-section">
+            <p>My contact information: </p>
+            <address id="contact-info">
+              <p>My name is Sally</p>
+              <p>My email is: <a href="mailto://sally@IntenetExplorer.old">sally@IntenetExplorer.old</a></p>
+              <p>My phone number is: <a href="tel:+34100572415">+34 100 57 24 15</a></p>
+            </address>
+          </section>
+        </main>
+      </App>,
+      document.querySelector('#resume-root')
+    );
+  </script>
+</body>
+
+</html>
